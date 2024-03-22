@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
-
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -28,14 +27,12 @@ const Login = () => {
 
       const data = await response.json();
       localStorage.setItem("token", data.token);
-    //   localStorage.setItem("userId", data.userId);
 
       if (data.token) {
-        navigate("/products")
+        navigate("/products");
       }
     } catch (error) {
       console.error("Error during login:", error);
-     
     }
   };
 

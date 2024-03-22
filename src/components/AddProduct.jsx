@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
 const AddProduct = ({ show, onHide, onAddProduct }) => {
-    
   const [formData, setFormData] = useState({
     productName: "",
     productPrice: "",
